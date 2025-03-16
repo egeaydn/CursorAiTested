@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modern Ürün Kartı</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
@@ -28,15 +28,10 @@
                         <i class="far fa-user"></i>
                         <span>Hesabım</span>
                     </a>
-                    <a href="#" class="nav-link">
+                    <a href="favorites.html" class="nav-link">
                         <i class="far fa-heart"></i>
                         <span>Favorilerim</span>
-                        <span class="badge">5</span>
-                    </a>
-                    <a href="#" class="nav-link">
-                        <i class="fas fa-shopping-cart"></i>
-                        <span>Sepetim</span>
-                        <span class="badge">2</span>
+                        <span class="badge" id="favoriteCount">0</span>
                     </a>
                 </div>
             </div>
@@ -57,190 +52,551 @@
             </div>
         </div>
     </nav>
-    <div class="container">
-        <div class="product-card">
-            <div class="product-badge">
-                <span class="discount">%35</span>
-                <span class="cargo-free">Kargo Bedava</span>
-            </div>
-            <div class="product-favorite">
-                <i class="far fa-heart"></i>
-            </div>
-            <div class="product-image">
-                <img src="https://picsum.photos/400/500?random=1" alt="Nike Spor Ayakkabı">
-                <div class="quick-view">
-                    <span>Hızlı Görünüm</span>
+
+    <!-- Slider Bölümü -->
+    <div class="slider-container">
+        <div class="slider">
+            <div class="slide active">
+                <div class="slide-content">
+                    <h2>Yeni Sezon Koleksiyonu</h2>
+                    <p>En trend ürünler, en uygun fiyatlarla</p>
+                    <a href="#" class="shop-now">Hemen Keşfet</a>
                 </div>
+                <img src="https://images.unsplash.com/photo-1445205170230-053b83016050?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Yeni Sezon">
             </div>
-            <div class="product-info">
-                <div class="brand">Nike</div>
-                <div class="name">Spor Ayakkabı Ultra Comfort Series X-500</div>
-                <div class="rating">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                    <span class="rating-count">(128)</span>
+            <div class="slide">
+                <div class="slide-content">
+                    <h2>Büyük Yaz İndirimi</h2>
+                    <p>%50'ye varan indirimler</p>
+                    <a href="#" class="shop-now">İndirimleri Keşfet</a>
                 </div>
-                <div class="price">
-                    <span class="original">2.499,90 TL</span>
-                    <span class="discounted">1.624,90 TL</span>
+                <img src="https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Yaz İndirimi">
+            </div>
+            <div class="slide">
+                <div class="slide-content">
+                    <h2>Yeni Gelenler</h2>
+                    <p>En yeni ürünler burada</p>
+                    <a href="#" class="shop-now">Yeni Ürünleri Keşfet</a>
                 </div>
+                <img src="https://images.unsplash.com/photo-1445205170230-053b83016050?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Yeni Gelenler">
             </div>
         </div>
-
-        <div class="product-card">
-            <div class="product-badge">
-                <span class="discount">%20</span>
-            </div>
-            <div class="product-favorite">
-                <i class="far fa-heart"></i>
-            </div>
-            <div class="product-image">
-                <img src="https://picsum.photos/400/500?random=2" alt="Zara Kadın Ceket">
-                <div class="quick-view">
-                    <span>Hızlı Görünüm</span>
-                </div>
-            </div>
-            <div class="product-info">
-                <div class="brand">Zara</div>
-                <div class="name">Kadın Suni Deri Biker Ceket</div>
-                <div class="rating">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="far fa-star"></i>
-                    <span class="rating-count">(85)</span>
-                </div>
-                <div class="price">
-                    <span class="original">1.299,90 TL</span>
-                    <span class="discounted">1.039,90 TL</span>
-                </div>
-            </div>
+        <button class="slider-btn prev">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="slider-btn next">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+        <div class="slider-dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
         </div>
+    </div>
 
-        <div class="product-card">
-            <div class="product-badge">
-                <span class="cargo-free">Kargo Bedava</span>
+    <div class="main-content">
+        <!-- Filtreleme Paneli -->
+        <aside class="filter-panel">
+            <div class="filter-header">
+                <h3>Filtreler</h3>
+                <button class="clear-filters">Filtreleri Temizle</button>
             </div>
-            <div class="product-favorite">
-                <i class="far fa-heart"></i>
-            </div>
-            <div class="product-image">
-                <img src="https://picsum.photos/400/500?random=3" alt="Mavi Kot Pantolon">
-                <div class="quick-view">
-                    <span>Hızlı Görünüm</span>
-                </div>
-            </div>
-            <div class="product-info">
-                <div class="brand">Mavi</div>
-                <div class="name">Marcus Comfort Stretch Jean Pantolon</div>
-                <div class="rating">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <span class="rating-count">(246)</span>
-                </div>
-                <div class="price">
-                    <span class="discounted">899,90 TL</span>
-                </div>
-            </div>
-        </div>
 
-        <div class="product-card">
-            <div class="product-badge">
-                <span class="discount">%50</span>
-                <span class="cargo-free">Kargo Bedava</span>
-            </div>
-            <div class="product-favorite">
-                <i class="far fa-heart"></i>
-            </div>
-            <div class="product-image">
-                <img src="https://picsum.photos/400/500?random=4" alt="Pull&Bear Sweatshirt">
-                <div class="quick-view">
-                    <span>Hızlı Görünüm</span>
+            <!-- Kategori Filtresi -->
+            <div class="filter-section">
+                <div class="filter-title">
+                    <h4>Kategoriler</h4>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="filter-content">
+                    <div class="filter-group">
+                        <label class="checkbox-container">
+                            <input type="checkbox" value="kadin">
+                            <span class="checkmark"></span>
+                            Kadın
+                        </label>
+                        <label class="checkbox-container">
+                            <input type="checkbox" value="erkek">
+                            <span class="checkmark"></span>
+                            Erkek
+                        </label>
+                        <label class="checkbox-container">
+                            <input type="checkbox" value="cocuk">
+                            <span class="checkmark"></span>
+                            Çocuk
+                        </label>
+                    </div>
                 </div>
             </div>
-            <div class="product-info">
-                <div class="brand">Pull&Bear</div>
-                <div class="name">Oversize Fit Kapüşonlu Basic Sweatshirt</div>
-                <div class="rating">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star-half-alt"></i>
-                    <span class="rating-count">(167)</span>
-                </div>
-                <div class="price">
-                    <span class="original">599,90 TL</span>
-                    <span class="discounted">299,90 TL</span>
-                </div>
-            </div>
-        </div>
 
-        <div class="product-card">
-            <div class="product-badge">
-                <span class="discount">%30</span>
-            </div>
-            <div class="product-favorite">
-                <i class="far fa-heart"></i>
-            </div>
-            <div class="product-image">
-                <img src="https://picsum.photos/400/500?random=5" alt="Bershka Elbise">
-                <div class="quick-view">
-                    <span>Hızlı Görünüm</span>
+            <!-- Alt Kategori Filtresi -->
+            <div class="filter-section">
+                <div class="filter-title">
+                    <h4>Alt Kategoriler</h4>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="filter-content">
+                    <div class="filter-group">
+                        <label class="checkbox-container">
+                            <input type="checkbox" value="elbise">
+                            <span class="checkmark"></span>
+                            Elbise
+                        </label>
+                        <label class="checkbox-container">
+                            <input type="checkbox" value="pantolon">
+                            <span class="checkmark"></span>
+                            Pantolon
+                        </label>
+                        <label class="checkbox-container">
+                            <input type="checkbox" value="ust-giyim">
+                            <span class="checkmark"></span>
+                            Üst Giyim
+                        </label>
+                        <label class="checkbox-container">
+                            <input type="checkbox" value="ayakkabi">
+                            <span class="checkmark"></span>
+                            Ayakkabı
+                        </label>
+                    </div>
                 </div>
             </div>
-            <div class="product-info">
-                <div class="brand">Bershka</div>
-                <div class="name">Kadın Saten Mini Elbise</div>
-                <div class="rating">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="far fa-star"></i>
-                    <span class="rating-count">(92)</span>
-                </div>
-                <div class="price">
-                    <span class="original">799,90 TL</span>
-                    <span class="discounted">559,90 TL</span>
-                </div>
-            </div>
-        </div>
 
-        <div class="product-card">
-            <div class="product-favorite">
-                <i class="far fa-heart"></i>
-            </div>
-            <div class="product-image">
-                <img src="https://picsum.photos/400/500?random=6" alt="Adidas T-shirt">
-                <div class="quick-view">
-                    <span>Hızlı Görünüm</span>
+            <!-- Fiyat Aralığı Filtresi -->
+            <div class="filter-section">
+                <div class="filter-title">
+                    <h4>Fiyat Aralığı</h4>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="filter-content">
+                    <div class="price-range">
+                        <div class="price-inputs">
+                            <input type="number" id="minPrice" placeholder="Min">
+                            <span>-</span>
+                            <input type="number" id="maxPrice" placeholder="Max">
+                        </div>
+                        <div class="price-slider">
+                            <input type="range" id="priceRange" min="0" max="5000" step="100">
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="product-info">
-                <div class="brand">Adidas</div>
-                <div class="name">Erkek Sportswear Future Icons Logo Graphic Tişört</div>
-                <div class="rating">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <span class="rating-count">(178)</span>
+
+            <!-- Marka Filtresi -->
+            <div class="filter-section">
+                <div class="filter-title">
+                    <h4>Markalar</h4>
+                    <i class="fas fa-chevron-down"></i>
                 </div>
-                <div class="price">
-                    <span class="discounted">449,90 TL</span>
+                <div class="filter-content">
+                    <div class="filter-group">
+                        <label class="checkbox-container">
+                            <input type="checkbox" value="nike">
+                            <span class="checkmark"></span>
+                            Nike
+                        </label>
+                        <label class="checkbox-container">
+                            <input type="checkbox" value="zara">
+                            <span class="checkmark"></span>
+                            Zara
+                        </label>
+                        <label class="checkbox-container">
+                            <input type="checkbox" value="mavi">
+                            <span class="checkmark"></span>
+                            Mavi
+                        </label>
+                        <label class="checkbox-container">
+                            <input type="checkbox" value="pullbear">
+                            <span class="checkmark"></span>
+                            Pull&Bear
+                        </label>
+                        <label class="checkbox-container">
+                            <input type="checkbox" value="bershka">
+                            <span class="checkmark"></span>
+                            Bershka
+                        </label>
+                        <label class="checkbox-container">
+                            <input type="checkbox" value="adidas">
+                            <span class="checkmark"></span>
+                            Adidas
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Beden Filtresi -->
+            <div class="filter-section">
+                <div class="filter-title">
+                    <h4>Bedenler</h4>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="filter-content">
+                    <div class="filter-group">
+                        <label class="checkbox-container">
+                            <input type="checkbox" value="xs">
+                            <span class="checkmark"></span>
+                            XS
+                        </label>
+                        <label class="checkbox-container">
+                            <input type="checkbox" value="s">
+                            <span class="checkmark"></span>
+                            S
+                        </label>
+                        <label class="checkbox-container">
+                            <input type="checkbox" value="m">
+                            <span class="checkmark"></span>
+                            M
+                        </label>
+                        <label class="checkbox-container">
+                            <input type="checkbox" value="l">
+                            <span class="checkmark"></span>
+                            L
+                        </label>
+                        <label class="checkbox-container">
+                            <input type="checkbox" value="xl">
+                            <span class="checkmark"></span>
+                            XL
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Renk Filtresi -->
+            <div class="filter-section">
+                <div class="filter-title">
+                    <h4>Renkler</h4>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="filter-content">
+                    <div class="color-options">
+                        <label class="color-option">
+                            <input type="checkbox" value="siyah">
+                            <span class="color-circle" style="background-color: #000000;"></span>
+                        </label>
+                        <label class="color-option">
+                            <input type="checkbox" value="beyaz">
+                            <span class="color-circle" style="background-color: #FFFFFF; border: 1px solid #e0e0e0;"></span>
+                        </label>
+                        <label class="color-option">
+                            <input type="checkbox" value="kirmizi">
+                            <span class="color-circle" style="background-color: #FF0000;"></span>
+                        </label>
+                        <label class="color-option">
+                            <input type="checkbox" value="mavi">
+                            <span class="color-circle" style="background-color: #0000FF;"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- İndirim Filtresi -->
+            <div class="filter-section">
+                <div class="filter-title">
+                    <h4>İndirim Oranı</h4>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="filter-content">
+                    <div class="filter-group">
+                        <label class="checkbox-container">
+                            <input type="checkbox" value="50">
+                            <span class="checkmark"></span>
+                            %50 ve üzeri
+                        </label>
+                        <label class="checkbox-container">
+                            <input type="checkbox" value="30">
+                            <span class="checkmark"></span>
+                            %30 ve üzeri
+                        </label>
+                        <label class="checkbox-container">
+                            <input type="checkbox" value="20">
+                            <span class="checkmark"></span>
+                            %20 ve üzeri
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kargo Filtresi -->
+            <div class="filter-section">
+                <div class="filter-title">
+                    <h4>Kargo</h4>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="filter-content">
+                    <div class="filter-group">
+                        <label class="checkbox-container">
+                            <input type="checkbox" value="free-shipping">
+                            <span class="checkmark"></span>
+                            Ücretsiz Kargo
+                        </label>
+                        <label class="checkbox-container">
+                            <input type="checkbox" value="same-day">
+                            <span class="checkmark"></span>
+                            Aynı Gün Kargo
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Ürün Listesi -->
+        <div class="products-container">
+            <div class="products-header">
+                <div class="products-count">
+                    <span id="filteredCount">6</span> ürün bulundu
+                </div>
+                <div class="sort-options">
+                    <select id="sortSelect">
+                        <option value="popular">En Çok Satanlar</option>
+                        <option value="price-asc">Fiyat (Düşükten Yükseğe)</option>
+                        <option value="price-desc">Fiyat (Yüksekten Düşüğe)</option>
+                        <option value="newest">En Yeniler</option>
+                        <option value="rating">En Yüksek Puan</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="product-card" data-category="kadin">
+                    <div class="product-badge">
+                        <span class="discount">%35</span>
+                        <span class="cargo-free">Kargo Bedava</span>
+                    </div>
+                    <div class="product-favorite">
+                        <i class="far fa-heart"></i>
+                    </div>
+                    <div class="product-image">
+                        <img src="https://picsum.photos/400/500?random=1" alt="Nike Spor Ayakkabı">
+                        <div class="quick-view">
+                            <a href="product-detail.html" style="color: white;">Hızlı Görünüm</a>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="brand">Nike</div>
+                        <div class="name">Spor Ayakkabı Ultra Comfort Series X-500</div>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span class="rating-count">(128)</span>
+                        </div>
+                        <div class="price">
+                            <span class="original">2.499,90 TL</span>
+                            <span class="discounted">1.624,90 TL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="kadin">
+                    <div class="product-badge">
+                        <span class="discount">%20</span>
+                        <span class="cargo-free">Ücretsiz Kargo</span>
+                    </div>
+                    <div class="product-favorite">
+                        <i class="far fa-heart"></i>
+                    </div>
+                    <div class="product-image">
+                        <img src="https://picsum.photos/400/500?random=2" alt="Zara Kadın Ceket">
+                        <div class="quick-view">
+                            <a href="product-detail.html" style="color: white;">Hızlı Görünüm</a>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="brand">Zara</div>
+                        <div class="name">Kadın Suni Deri Biker Ceket</div>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span class="rating-count">(85)</span>
+                        </div>
+                        <div class="price">
+                            <span class="original">1.299,90 TL</span>
+                            <span class="discounted">1.039,90 TL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="cocuk">
+                    <div class="product-badge">
+                        <span class="discount">%25</span>
+                        <span class="cargo-free">Ücretsiz Kargo</span>
+                    </div>
+                    <div class="product-favorite">
+                        <i class="far fa-heart"></i>
+                    </div>
+                    <div class="product-image">
+                        <img src="https://picsum.photos/400/500?random=3" alt="Mavi Kot Pantolon">
+                        <div class="quick-view">
+                            <a href="product-detail.html" style="color: white;">Hızlı Görünüm</a>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="brand">Mavi</div>
+                        <div class="name">Marcus Comfort Stretch Jean Pantolon</div>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span class="rating-count">(246)</span>
+                        </div>
+                        <div class="price">
+                            <span class="discounted">899,90 TL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="ev-yasam">
+                    <div class="product-badge">
+                        <span class="discount">%10</span>
+                        <span class="cargo-free">Ücretsiz Kargo</span>
+                    </div>
+                    <div class="product-favorite">
+                        <i class="far fa-heart"></i>
+                    </div>
+                    <div class="product-image">
+                        <img src="https://picsum.photos/400/500?random=4" alt="Pull&Bear Sweatshirt">
+                        <div class="quick-view">
+                            <a href="product-detail.html" style="color: white;">Hızlı Görünüm</a>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="brand">Pull&Bear</div>
+                        <div class="name">Oversize Fit Kapüşonlu Basic Sweatshirt</div>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span class="rating-count">(167)</span>
+                        </div>
+                        <div class="price">
+                            <span class="original">599,90 TL</span>
+                            <span class="discounted">299,90 TL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="erkek">
+                    <div class="product-badge">
+                        <span class="discount">%15</span>
+                        <span class="cargo-free">Ücretsiz Kargo</span>
+                    </div>
+                    <div class="product-favorite">
+                        <i class="far fa-heart"></i>
+                    </div>
+                    <div class="product-image">
+                        <img src="https://picsum.photos/400/500?random=5" alt="Bershka Elbise">
+                        <div class="quick-view">
+                            <a href="product-detail.html" style="color: white;">Hızlı Görünüm</a>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="brand">Bershka</div>
+                        <div class="name">Kadın Saten Mini Elbise</div>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span class="rating-count">(92)</span>
+                        </div>
+                        <div class="price">
+                            <span class="original">799,90 TL</span>
+                            <span class="discounted">559,90 TL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-category="cocuk">
+                    <div class="product-favorite">
+                        <i class="far fa-heart"></i>
+                    </div>
+                    <div class="product-image">
+                        <img src="https://picsum.photos/400/500?random=6" alt="Adidas T-shirt">
+                        <div class="quick-view">
+                            <a href="product-detail.html" style="color: white;">Hızlı Görünüm</a>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="brand">Adidas</div>
+                        <div class="name">Erkek Sportswear Future Icons Logo Graphic Tişört</div>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span class="rating-count">(178)</span>
+                        </div>
+                        <div class="price">
+                            <span class="discounted">449,90 TL</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <script src="script.js"></script>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>TrendStore</h3>
+                <p>En trend ürünler, en uygun fiyatlarla TrendStore'da!</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h4>Kategoriler</h4>
+                <ul>
+                    <li><a href="#">Kadın</a></li>
+                    <li><a href="#">Erkek</a></li>
+                    <li><a href="#">Çocuk</a></li>
+                    <li><a href="#">Ev & Yaşam</a></li>
+                    <li><a href="#">Süpermarket</a></li>
+                    <li><a href="#">Kozmetik</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Yardım</h4>
+                <ul>
+                    <li><a href="#">Sıkça Sorulan Sorular</a></li>
+                    <li><a href="#">Kargo Takip</a></li>
+                    <li><a href="#">İade ve Değişim</a></li>
+                    <li><a href="#">Gizlilik Politikası</a></li>
+                    <li><a href="#">Kullanım Koşulları</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>İletişim</h4>
+                <ul>
+                    <li><i class="fas fa-phone"></i> 0850 123 45 67</li>
+                    <li><i class="fas fa-envelope"></i> info@trendstore.com</li>
+                    <li><i class="fas fa-map-marker-alt"></i> İstanbul, Türkiye</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 TrendStore. Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/favorites.js"></script>
+    <script src="assets/js/script.js"></script>
 </body>
 </html> 
