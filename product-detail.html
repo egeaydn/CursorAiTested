@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ürün Detayı - TrendStore</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="product-detail.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <!-- Mevcut navbar kodları buraya gelecek -->
+    </nav>
+    
+    <div class="product-detail-container">
+        <div class="product-detail">
+            <div class="product-gallery">
+                <div class="main-image">
+                    <img src="" alt="" id="mainImage">
+                </div>
+                <div class="thumbnail-list">
+                    <img src="" alt="" class="thumbnail active">
+                    <img src="" alt="" class="thumbnail">
+                    <img src="" alt="" class="thumbnail">
+                    <img src="" alt="" class="thumbnail">
+                </div>
+            </div>
+            
+            <div class="product-info-detail">
+                <div class="brand" id="productBrand"></div>
+                <h1 class="name" id="productName"></h1>
+                
+                <div class="rating">
+                    <div class="stars" id="productStars"></div>
+                    <span class="rating-count" id="productRatingCount"></span>
+                </div>
+                
+                <div class="price-detail">
+                    <div class="original" id="productOriginalPrice"></div>
+                    <div class="discounted" id="productDiscountedPrice"></div>
+                    <div class="discount-rate" id="productDiscountRate"></div>
+                </div>
+                
+                <div class="size-selector">
+                    <h3>Beden</h3>
+                    <div class="size-options">
+                        <button class="size-btn">S</button>
+                        <button class="size-btn">M</button>
+                        <button class="size-btn">L</button>
+                        <button class="size-btn">XL</button>
+                    </div>
+                </div>
+                
+                <div class="color-selector">
+                    <h3>Renk</h3>
+                    <div class="color-options">
+                        <button class="color-btn" style="background-color: #000000;"></button>
+                        <button class="color-btn" style="background-color: #FFFFFF; border: 1px solid #e0e0e0;"></button>
+                        <button class="color-btn" style="background-color: #FF0000;"></button>
+                        <button class="color-btn" style="background-color: #0000FF;"></button>
+                    </div>
+                </div>
+                
+                <div class="quantity-selector">
+                    <h3>Adet</h3>
+                    <div class="quantity-controls">
+                        <button class="quantity-btn minus">-</button>
+                        <input type="number" value="1" min="1" max="10" class="quantity-input">
+                        <button class="quantity-btn plus">+</button>
+                    </div>
+                </div>
+                
+                <div class="action-buttons">
+                    <button class="add-to-cart">
+                        <i class="fas fa-shopping-cart"></i>
+                        Sepete Ekle
+                    </button>
+                    <button class="add-to-favorites">
+                        <i class="far fa-heart"></i>
+                    </button>
+                </div>
+                
+                <div class="product-details">
+                    <div class="detail-item">
+                        <i class="fas fa-truck"></i>
+                        <span id="cargoInfo">Kargo Bedava</span>
+                    </div>
+                    <div class="detail-item">
+                        <i class="fas fa-undo"></i>
+                        <span>15 Gün İçinde Ücretsiz İade</span>
+                    </div>
+                </div>
+                
+                <div class="product-description">
+                    <h3>Ürün Açıklaması</h3>
+                    <p id="productDescription"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="product-detail.js"></script>
+</body>
+</html> 
